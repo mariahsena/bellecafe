@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Vendas</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Bélle Café</h2>
+
+        <div>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/produtos">Produtos</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/usuarios">Usuários</a>
+
+            <a href="/logout">Sair</a>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Vendas</h1>
+
+        <a href="/vendas/nova">
+
+            <button>Nova Venda</button>
+
+        </a>
+
+        <table>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Data</th>
+                <th>Total</th>
+                <th>Ações</th>
+
+            </tr>
+
+            {% for venda in vendas %}
+
+            <tr>
+
+                <td>{{ venda[0] }}</td>
+
+                <td>{{ venda[1] }}</td>
+
+                <td>{{ venda[2] }}</td>
+
+                <td>R$ {{ venda[3] }}</td>
+
+                <td>
+
+                    <a href="/vendas/deletar/{{ venda[0] }}">
+
+                        <button class="btn-excluir">
+
+                            Excluir
+
+                        </button>
+
+                        <a href="/vendas/editar/{{ venda[0] }}">
+
+                            <button class="btn-editar">
+
+                                Editar
+
+                            </button>
+
+                        </a>
+
+                        <a href="/vendas/deletar/{{ venda[0] }}">
+
+                        </a>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

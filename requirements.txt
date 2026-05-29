@@ -1,0 +1,3 @@
+Flask
+Flask-SocketIO #ATUALIZACAO EM TEMPO REAL
+gunicorn #executar no render

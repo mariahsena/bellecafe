@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Usuários</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Bélle Café</h2>
+
+        <div>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/produtos">Produtos</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/vendas">Vendas</a>
+
+            <a href="/usuarios">Usuários</a>
+
+            <a href="/logout">Sair</a>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Usuários</h1>
+
+        <a href="/usuarios/novo">
+
+            <button>Novo Usuário</button>
+
+        </a>
+
+        <table>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Nome</th>
+
+                <th>Email</th>
+
+                <th>Perfil</th>
+
+                <th>Ações</th>
+
+            </tr>
+
+            {% for usuario in usuarios %}
+
+            <tr>
+
+                <td>{{ usuario[0] }}</td>
+
+                <td>{{ usuario[1] }}</td>
+
+                <td>{{ usuario[2] }}</td>
+
+                <td>{{ usuario[4] }}</td>
+
+                <td>
+
+                    <a href="/usuarios/editar/{{ usuario[0] }}">
+
+                        <button class="btn-editar">
+
+                            Editar
+
+                        </button>
+
+                    </a>
+
+                    <a href="/usuarios/deletar/{{ usuario[0] }}" onclick="return confirmarExclusao()">
+
+                        <button class="btn-excluir">
+
+                            Excluir
+
+                        </button>
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

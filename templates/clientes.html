@@ -1,0 +1,113 @@
+<!-- templates/clientes.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Clientes</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <nav>
+
+        <h2>Bélle Café</h2>
+
+        <div>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/produtos">Produtos</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/vendas">Vendas</a>
+
+            <a href="/usuarios">Usuários</a>
+
+            <a href="/logout">Sair</a>
+
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+
+        <h1>Clientes</h1>
+
+        <a href="/clientes/novo">
+            <button>Novo Cliente</button>
+        </a>
+
+        
+        <table>
+
+    <tr>
+
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+
+    </tr>
+
+    {% for cliente in clientes %}
+
+    <tr>
+
+        <td>{{ cliente[0] }}</td>
+        <td>{{ cliente[1] }}</td>
+        <td>{{ cliente[2] }}</td>
+        <td>{{ cliente[3] }}</td>
+
+        <td>
+
+            <a href="/clientes/editar/{{ cliente[0] }}">
+
+                <button class="btn-editar">
+
+                    Editar
+
+                </button>
+
+            </a>
+
+            <a href="/clientes/deletar/{{ cliente[0] }}">
+
+                <button class="btn-excluir">
+
+                    Excluir
+
+                </button>
+
+            </a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Nova Venda</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Bélle Café</h2>
+
+        <div>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/produtos">Produtos</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/vendas">Vendas</a>
+
+            <a href="/usuarios">Usuários</a>
+
+            <a href="/logout">Sair</a>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Nova Venda</h1>
+
+        <form method="POST" action="/vendas/salvar">
+
+            <!-- CLIENTE -->
+
+            <label>
+
+                Cliente
+
+            </label>
+
+            <select name="cliente_id" required>
+
+                {% for cliente in clientes %}
+
+                <option value="{{ cliente[0] }}">
+
+                    {{ cliente[1] }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <!-- PRODUTO -->
+
+            <label>
+
+                Produto
+
+            </label>
+
+            <select name="produto_id" required>
+
+                {% for produto in produtos %}
+
+                <option value="{{ produto[0] }}">
+
+                    {{ produto[1] }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <!-- QUANTIDADE -->
+
+            <label>
+
+                Quantidade
+
+            </label>
+
+            <input type="number" name="quantidade" required>
+
+            <button type="submit">
+
+                Salvar Venda
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+</body>
+
+</html>

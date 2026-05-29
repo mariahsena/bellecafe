@@ -1,0 +1,237 @@
+/* ========================= */
+/* CONFIGURAÇÃO GERAL */
+/* ========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Conteúdo principal */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav {
+    background-color: #6C3717;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #9C7A64;
+}
+
+/* ========================= */
+/* LOGIN */
+/* ========================= */
+
+.login-box {
+    width: 350px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ========================= */
+/* TEXTOS */
+/* ========================= */
+
+h1, h2 {
+    color: #1e293b;
+}
+
+/* ========================= */
+/* INPUTS */
+/* ========================= */
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+button {
+    background-color: #876A50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #9a5833;
+}
+
+/* ========================= */
+/* TABELAS */
+/* ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #7D4820;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ========================= */
+/* DASHBOARD */
+/* ========================= */
+
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-card h3 {
+    font-size: 40px;
+    margin: 0;
+    color: #9C7A64;
+}
+
+/* ========================= */
+/* CARD DO GRÁFICO */
+/* ========================= */
+
+.grafico-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Gráfico */
+canvas {
+    max-width: 700px;
+    max-height: 350px;
+    margin: auto;
+    display: block;
+}
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+footer {
+    background-color: #6C3717;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+/* ========================= */
+/* LINKS DOS BOTÕES */
+/* ========================= */
+
+a {
+    text-decoration: none;
+}
+
+/* Espaçamento dos botões */
+td button {
+    margin-right: 5px;
+}
+
+/* Botão excluir */
+.btn-excluir {
+    background-color: #876A50;
+}
+
+.btn-excluir:hover {
+    background-color:#9a5833 ;
+}
+
+/* Botão editar */
+.btn-editar {
+    background-color: #876A50;
+}
+
+.btn-editar:hover {
+    background-color: #9a5833;
+}
+
+/* Título centralizado */
+.container h1 {
+    margin-bottom: 20px;
+}
+
+table img{
+
+    border-radius: 10px;
+
+    object-fit: cover;
+
+}

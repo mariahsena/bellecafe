@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Editar Cliente</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <nav>
+
+        <h2>Bélle Café</h2>
+
+        <div>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/produtos">Produtos</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/vendas">Vendas</a>
+
+            <a href="/usuarios">Usuários</a>
+
+            <a href="/logout">Sair</a>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Editar Cliente</h1>
+
+        <form method="POST" action="/clientes/atualizar/{{ cliente[0] }}">
+
+            <input type="text" name="nome" value="{{ cliente[1] }}" required>
+
+            <input type="email" name="email" value="{{ cliente[2] }}" required>
+
+            <input type="text" name="telefone" value="{{ cliente[3] }}" required>
+
+            <button type="submit">
+
+                Atualizar
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+</body>
+
+</html>

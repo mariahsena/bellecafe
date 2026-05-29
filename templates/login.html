@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h2>Login</h2>
+
+        <form method="POST" action="/login">
+
+            <input name="email" placeholder="Email">
+
+            <input type="password" name="senha" placeholder="Senha">
+
+            <button>Entrar</button>
+            <p>
+                Não possui conta?
+            </p>
+
+            <a href="/usuarios/novo">
+                <button type="button">Criar Conta</button>
+            </a>
+
+        </form>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

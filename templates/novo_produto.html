@@ -1,0 +1,74 @@
+<!-- templates/novo_produto.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Novo Produto</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <nav>
+
+        <h2>Bélle Café</h2>
+
+        <div>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/produtos">Produtos</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/vendas">Vendas</a>
+
+            <a href="/usuarios">Usuários</a>
+
+            <a href="/logout">Sair</a>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>Novo Produto</h1>
+
+        <form method="POST" action="/produtos/salvar" enctype="multipart/form-data">
+
+        <input name="nome" placeholder="Nome">
+
+        <input name="categoria" placeholder="Categoria">
+
+        <input name="preco" placeholder="Preço">
+
+        <input name="estoque" placeholder="Estoque">
+
+        <label>Imagem do Produto</label>
+
+        <input type="file" name="imagem" required>
+
+        <button>Salvar</button>
+
+        </form>
+
+    </div>
+
+    <footer>
+
+        <p>Bélle Café - © 2026</p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

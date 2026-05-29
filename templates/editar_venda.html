@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Editar Venda</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+        <h2>Bélle Café</h2>
+
+</nav>
+
+<div class="container">
+
+    <h1>Editar Venda</h1>
+
+    <form method="POST"
+      action="/vendas/atualizar/{{ venda[0] }}">
+
+    <!-- CLIENTE -->
+
+    <label>Cliente</label>
+
+    <select name="cliente_id">
+
+        {% for cliente in clientes %}
+
+        <option value="{{ cliente[0] }}">
+
+            {{ cliente[1] }}
+
+        </option>
+
+        {% endfor %}
+
+    </select>
+
+    <!-- PRODUTO -->
+
+    <label>Produto</label>
+
+    <select name="produto_id">
+
+        {% for produto in produtos %}
+
+        <option value="{{ produto[0] }}">
+
+            {{ produto[1] }}
+
+        </option>
+
+        {% endfor %}
+
+    </select>
+
+    <!-- QUANTIDADE -->
+
+    <label>Quantidade</label>
+
+    <input type="number"
+           name="quantidade"
+           value="{{ item[1] }}"
+           required>
+
+    <button type="submit">
+
+        Atualizar
+
+    </button>
+
+</form>
+
+</div>
+
+<footer>
+
+    <p>Bélle Café - © 2026</p>
+
+</footer>
+
+</body>
+
+</html>
